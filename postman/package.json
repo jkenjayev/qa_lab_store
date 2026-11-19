@@ -1,0 +1,15 @@
+{
+  "name": "qa-lab-postman",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Postman collections of the QA Simulation Lab apps, their generator and a small runner. No dependencies.",
+  "type": "module",
+  "scripts": {
+    "build:clinicbook": "node tools/build-clinicbook.mjs",
+    "test": "node --test",
+    "check": "node --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-include=tools/** "
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

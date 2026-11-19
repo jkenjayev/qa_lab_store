@@ -1,0 +1,21 @@
+{
+  "name": "freshcart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FreshCart: runnable training web shop with seeded defects for the QA Simulation Lab",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start:reference": "SEEDED_DEFECTS=off node server.js",
+    "start:memory": "STORAGE=memory node server.js",
+    "postman:build": "node scripts/build-postman.mjs",
+    "notion:seed": "node scripts/notion-seed.mjs",
+    "notion:verify": "node scripts/notion-verify.mjs",
+    "test": "node --test",
+    "check": "node --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-include=src/** --test-coverage-include=public/js/** --test-coverage-exclude=public/js/glue/**"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.31.1",
+    "express": "^4.21.2"
+  }
+}
